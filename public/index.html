@@ -4,6 +4,9 @@
     <!-- Meta Information -->
     <title>Tweeter - Home Page</title>
 
+    <!-- viewport zooming disable -->
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0' />
+
     <!-- External CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" type="text/css" />
 
@@ -15,18 +18,18 @@
     <!-- cdnjs -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/timeago.js/4.0.2/timeago.min.js"></script>
+
     <!-- App CSS -->
-    <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
     <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
     <link rel="stylesheet" href="/styles/header.css" type="text/css" />
     <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
     <link rel="stylesheet" href="/styles/tweets-from-db.css" type="text/css" />
+    <link rel="stylesheet" href="/styles/error.css" type="text/css" />
+    <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
 
     <!-- External JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-
-    <!-- App JS -->
-    <script type="text/javascript" src="/scripts/client.js"></script>
 
   </head>
 
@@ -35,13 +38,14 @@
     <nav>
       <span class="tweeter-title">Tweeter</span>
       <div class="write">
-      <span><b>Write</b> a new tweet</span>
-      <i class="fa-solid fa-angles-down double-arrow-down"></i>
+        <span><b>Write</b> a new tweet</span>
+        <i class="fa-solid fa-angles-down double-arrow-down"></i>
       </div>
     </nav>
-    <header>
+  <div class="desktop-view">
+    <header id="first-header">
       <div>
-          <img src="/images/profile-hex.png"> 
+          <img class="header-img" src="/images/profile-hex.png"> 
       </div>
       <br>
       <div>
@@ -52,9 +56,14 @@
     <!-- Page-specific (main) content here -->
     <main class="container">
       <section>
+        <section class="error">
+          <div class="error-message">
+          </div> 
+        </section>
+        
         <h2>Compose Tweet</h2>
-        <form class ="test" action="/tweets" method="post">
 
+        <form class ="test" action="/tweets" method="post">
           <textarea name="text" class="tweet-text" placeholder="What are you humming about?"></textarea>
 
           <div class="tweet-and-word-count">
@@ -63,25 +72,14 @@
           </div>
         </form>
 
-        <article class="tweets-from-db" class="mouse-over">
-          <article-head class="header">
-            
-            <span><i class="fa-solid fa-user header-icon"></i>Name</span>
-            <span>@Troll</span>
-          </article-head>
-            <p>YOU SHOULD NOT PASS</p>
-            <hr class="hr">
-            <footer class="footer">
-              <span>365 days ago</span>
-              <span>
-                <i class="fa-solid fa-flag footer-icons"></i>
-                <i class="fa-solid fa-share footer-icons"></i>
-                <i class="fa-solid fa-thumbs-up footer-icons"></i>
-              </span>
-            </footer>
-        </article>
+        <section class="tweets-container">
+        </section>
+      
       </section>
     </main>
+  </div>
+  
     <script src="/scripts/composer-char-counter.js"></script>
+    <script src="/scripts/client.js"></script>
   </body>
 </html>

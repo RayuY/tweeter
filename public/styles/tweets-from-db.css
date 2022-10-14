@@ -1,3 +1,4 @@
+
 .tweets-from-db {
   border: 3px solid black;
   border-radius: 5px;
@@ -9,14 +10,13 @@
   box-shadow: 5px 10px;
 }
 
+.tweets-from-db header {
+  display: flex;
+  justify-content: space-between;
+}
 
 .header-icon{
   padding-right: 20px;
-}
-
-.header {
-  display: flex;
-  justify-content: space-between;
 }
 
 .footer {

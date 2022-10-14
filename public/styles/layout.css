@@ -35,3 +35,30 @@ body {
   background-color: #f4f1ec;
 }
 
+/* desktop */
+@media (min-width: 1024px) {
+  .desktop-view {
+    display: flex;
+    justify-content: space-around;
+    margin: 100px 50px 0 50px;
+  }
+  #first-header {
+    width: 40%;
+    border-radius: 15px;
+    max-height: 600px;
+  }
+
+  .container {
+    margin: 120px 0 0 0;
+    width: 40%;
+  }
+}
+
+/* tablet
+@media (min-width: 768px) and (max-width: 1023px) {
+
+} 
+
+phone */ 
+/* @media (max-width: 400px) {
+} */

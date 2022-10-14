@@ -1,0 +1,18 @@
+.error {
+  display: none;
+}
+
+.error-message {
+  border: 3px solid red;
+  border-radius: 5px;
+  width: 100%;
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+  color: red;
+}
+
+.error-icon {
+  padding: 0 10px 0 10px;
+}
