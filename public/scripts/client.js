@@ -11,7 +11,8 @@ $(function () {
   $button.on('click', function (event) {
     event.preventDefault();
     let $text = $(".tweet-text").serialize();
-
+    $(".tweet-text").val('');
+    $(".counter").val('140');
     // decode to make readable text
     const plainText = decodeURIComponent($text).slice(5);
     // validate text
