@@ -5,6 +5,7 @@
  */
 html {
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 *, *:before, *:after {
   box-sizing: inherit;
@@ -51,6 +52,9 @@ body {
   .container {
     margin: 120px 0 0 0;
     width: 40%;
+  }
+  .error-message {
+    margin-top: 0;
   }
 }
 

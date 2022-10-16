@@ -13,6 +13,7 @@ $(function () {
     let $text = $(".tweet-text").serialize();
     $(".tweet-text").val('');
     $(".counter").val('140');
+
     // decode to make readable text
     const plainText = decodeURIComponent($text).slice(5);
     // validate text
@@ -113,6 +114,7 @@ const createTweetElement = function (obj) {
   `;
   return $tweet;
 }
+
 
 // shows tweets that are already in data.
 loadTweets();

@@ -37,12 +37,14 @@
     <!-- Top nav bar (fixed) -->
     <nav>
       <span class="tweeter-title">Tweeter</span>
-      <div class="write">
+      <div class="write" >
         <span><b>Write</b> a new tweet</span>
-        <i class="fa-solid fa-angles-down double-arrow-down"></i>
+        <a href="#tweet">
+        <i class=" fa-solid fa-angles-down double-arrow-down"></i>
+        </a>
       </div>
     </nav>
-  <div class="desktop-view">
+  <div id="tweet" class="desktop-view">
     <header id="first-header">
       <div>
           <img class="header-img" src="/images/profile-hex.png"> 
@@ -62,7 +64,7 @@
         </section>
 
         <form class ="test" action="/tweets" method="post">
-          <textarea name="text" class="tweet-text" placeholder="What are you humming about?"></textarea>
+          <textarea name="text"  class="tweet-text" placeholder="What are you humming about?"></textarea>
 
           <div class="tweet-and-word-count">
             <button type="submit">Tweet</button>
