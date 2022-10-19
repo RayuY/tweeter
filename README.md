@@ -16,3 +16,11 @@ This repository is the starter code for the project: Students will fork and clon
 
 - Express
 - Node 5.10.x or above
+- Body-parser
+- Chance
+- Md5
+
+## Screenshots
+
+!["desktop preview"](https://github.com/RayuY/tweeter/blob/master/docs/tweeter-clone-desktop-view.PNG)
+!["tablet and phone preview"](https://github.com/RayuY/tweeter/blob/master/docs/tweeter-clone-tablet-phone-view.PNG)
